@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 38,
+  "schemaVersion": 39,
   "id": "07b9aef7-d8d1-4640-925d-44037509a5ec",
   "activities": [
     {
@@ -116,7 +116,7 @@
             },
             "anonymousSteps": null
           },
-          "isBackground": true
+          "isBackground": false
         }
       ]
     }

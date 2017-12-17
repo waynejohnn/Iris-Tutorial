@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 38,
+  "schemaVersion": 39,
   "id": "03618a33-6c1b-42ae-85a5-c6c59736fae0",
   "activities": [
     {
@@ -92,7 +92,7 @@
             },
             "anonymousSteps": null
           },
-          "isBackground": true
+          "isBackground": false
         },
         {
           "id": "66378cca-9d5f-4d22-9b24-20ffd4db722b",
@@ -102,12 +102,126 @@
             "numberOfTopValues": 6,
             "descending": true,
             "includeNulls": true,
+            "haloEffect": true,
+            "logScale": false
+          },
+          "reference": {
+            "referenceType": 0,
+            "referenceContainerPath": null,
+            "referencedActivityId": "56b8ff53-ec51-455e-a9fb-f36e6ea56fe3",
+            "referencedBranchId": null,
+            "referencedStep": {
+              "stepReferenceType": 1,
+              "referencedStepId": null,
+              "fallback": 1
+            },
+            "anonymousSteps": null
+          },
+          "isBackground": true
+        },
+        {
+          "id": "0e2de4eb-2567-43cb-bf42-b292980c9c8c",
+          "type": "Microsoft.DPrep.PatternInspector",
+          "arguments": {
+            "columnId": "Species",
+            "numberOfTopValues": 6,
+            "descending": true,
             "haloEffect": true
           },
           "reference": {
             "referenceType": 0,
             "referenceContainerPath": null,
             "referencedActivityId": "56b8ff53-ec51-455e-a9fb-f36e6ea56fe3",
+            "referencedBranchId": null,
+            "referencedStep": {
+              "stepReferenceType": 1,
+              "referencedStepId": null,
+              "fallback": 1
+            },
+            "anonymousSteps": null
+          },
+          "isBackground": true
+        },
+        {
+          "id": "6578c1d0-796d-4dce-b21b-8159154df9b8",
+          "type": "Microsoft.DPrep.HistogramInspector",
+          "arguments": {
+            "columnId": "Sepal Width",
+            "numberOfBreaks": 6,
+            "defaultBucketing": true,
+            "haloEffect": true,
+            "densityPlot": true,
+            "logScale": false
+          },
+          "reference": {
+            "referenceType": 0,
+            "referenceContainerPath": null,
+            "referencedActivityId": "56b8ff53-ec51-455e-a9fb-f36e6ea56fe3",
+            "referencedBranchId": null,
+            "referencedStep": {
+              "stepReferenceType": 1,
+              "referencedStepId": null,
+              "fallback": 1
+            },
+            "anonymousSteps": null
+          },
+          "isBackground": true
+        }
+      ]
+    },
+    {
+      "id": "1551707e-4e3e-4b44-9c37-1bc397a8c9f1",
+      "name": "New Dataflow",
+      "blocks": [
+        {
+          "id": "04f3b70e-97d4-4edc-b76f-633a4639371a",
+          "type": "Microsoft.DPrep.ReferenceActivityBlock",
+          "arguments": {
+            "reference": {
+              "referenceType": 0,
+              "referenceContainerPath": null,
+              "referencedActivityId": "56b8ff53-ec51-455e-a9fb-f36e6ea56fe3",
+              "referencedBranchId": null,
+              "referencedStep": null,
+              "anonymousSteps": null
+            }
+          }
+        }
+      ],
+      "inspectors": [
+        {
+          "id": "bea4bcbb-39f3-4acb-8fc5-2e20e49eacc4",
+          "type": "Microsoft.DPrep.DataQualityInspector",
+          "arguments": {},
+          "reference": {
+            "referenceType": 0,
+            "referenceContainerPath": null,
+            "referencedActivityId": "1551707e-4e3e-4b44-9c37-1bc397a8c9f1",
+            "referencedBranchId": null,
+            "referencedStep": {
+              "stepReferenceType": 1,
+              "referencedStepId": null,
+              "fallback": 1
+            },
+            "anonymousSteps": null
+          },
+          "isBackground": false
+        },
+        {
+          "id": "353e5db1-df24-428a-bbe4-59d78b643189",
+          "type": "Microsoft.DPrep.HistogramInspector",
+          "arguments": {
+            "columnId": "Sepal Length",
+            "numberOfBreaks": 6,
+            "defaultBucketing": true,
+            "haloEffect": true,
+            "densityPlot": true,
+            "logScale": false
+          },
+          "reference": {
+            "referenceType": 0,
+            "referenceContainerPath": null,
+            "referencedActivityId": "1551707e-4e3e-4b44-9c37-1bc397a8c9f1",
             "referencedBranchId": null,
             "referencedStep": {
               "stepReferenceType": 1,
